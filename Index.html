@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Prashanth Chintalapalli | Network Engineer</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+<style>
+* { margin:0; padding:0; box-sizing:border-box; font-family:'Poppins', sans-serif; }
+
+body {
+  background: linear-gradient(135deg,#020617,#0f172a);
+  color:white;
+}
+
+/* Navbar */
+nav {
+  position:sticky; top:0;
+  display:flex; justify-content:space-between;
+  padding:20px 50px;
+  background:rgba(0,0,0,0.4);
+  backdrop-filter:blur(10px);
+}
+
+nav h2 { color:#38bdf8; }
+
+nav a {
+  color:white; text-decoration:none;
+  margin-left:20px;
+}
+
+/* Hero */
+.hero {
+  text-align:center;
+  padding:100px 20px;
+}
+
+.hero h1 { font-size:48px; }
+
+.typing {
+  color:#38bdf8;
+  border-right:2px solid #38bdf8;
+  padding-right:5px;
+}
+
+/* Button */
+.btn {
+  display:inline-block;
+  margin-top:25px;
+  padding:12px 25px;
+  background:#38bdf8;
+  color:black;
+  border-radius:6px;
+  text-decoration:none;
+  font-weight:600;
+}
+
+/* Sections */
+section {
+  max-width:1100px;
+  margin:auto;
+  padding:60px 20px;
+}
+
+.card {
+  background:rgba(255,255,255,0.05);
+  padding:25px;
+  border-radius:15px;
+  margin-bottom:20px;
+}
+
+/* Skills */
+.skills span {
+  display:inline-block;
+  background:#1e293b;
+  padding:8px 15px;
+  margin:5px;
+  border-radius:20px;
+}
+
+/* Footer */
+footer {
+  text-align:center;
+  padding:20px;
+  background:#020617;
+}
+</style>
+</head>
+
+<body>
+
+<nav>
+  <h2>Prashanth</h2>
+  <div>
+    <a href="#about">About</a>
+    <a href="#skills">Skills</a>
+    <a href="#projects">Projects</a>
+    <a href="#contact">Contact</a>
+  </div>
+</nav>
+
+<div class="hero">
+  <h1>Hi, I'm Prashanth Chintalapalli</h1>
+  <h2 class="typing" id="typing"></h2>
+  <a href="resume.pdf" class="btn" download>Download Resume</a>
+</div>
+
+<section id="about">
+  <div class="card">
+    <h2>About Me</h2>
+    <p>
+      Network Engineer with 4+ years of experience in NOC operations,
+      specializing in BGP, OSPF, MPLS, and enterprise troubleshooting.
+      Proven ability to maintain network uptime and resolve critical incidents.
+    </p>
+  </div>
+</section>
+
+<section id="skills">
+  <div class="card">
+    <h2>Skills</h2>
+    <div class="skills">
+      <span>BGP</span><span>OSPF</span><span>MPLS</span>
+      <span>Routing & Switching</span><span>Firewall</span>
+      <span>VPN</span><span>Cisco</span><span>Juniper</span>
+    </div>
+  </div>
+</section>
+
+<section id="projects">
+  <div class="card">
+    <h2>Projects</h2>
+    <p><b>BGP Multi-AS Lab:</b> Implemented eBGP/iBGP, route reflectors, and path selection.</p>
+    <p><b>OSPF Troubleshooting:</b> Diagnosed adjacency issues, LSA types, and DR/BDR elections.</p>
+    <p><b>MPLS L3VPN:</b> Configured VRF, RD/RT, label distribution and VPN routing.</p>
+  </div>
+</section>
+
+<section>
+  <div class="card">
+    <h2>Achievements</h2>
+    <ul>
+      <li>Handled 24/7 enterprise network monitoring</li>
+      <li>Resolved critical incidents within SLA</li>
+      <li>Reduced downtime through proactive troubleshooting</li>
+    </ul>
+  </div>
+</section>
+
+<section id="contact">
+  <div class="card">
+    <h2>Contact</h2>
+    <p>Email: prashanthchintalapalli1818@gmail.com</p>
+    <p><a href="#"> https://www.linkedin.com/in/prashanth-chintalapalli-0b1378396</a></p>
+  </div>
+</section>
+
+<footer>
+  <p>© 2026 Prashanth Chintalapalli</p>
+</footer>
+
+<script>
+const roles = ["Network Engineer", "NOC Specialist", "BGP | OSPF | MPLS Expert"];
+let i=0, j=0, current="", isDeleting=false;
+
+function type() {
+  current = roles[i];
+  document.getElementById("typing").textContent =
+    current.substring(0, j);
+
+  if(!isDeleting && j++ === current.length){
+    isDeleting = true;
+    setTimeout(type, 1000);
+    return;
+  }
+
+  if(isDeleting && j-- === 0){
+    isDeleting = false;
+    i = (i+1) % roles.length;
+  }
+
+  setTimeout(type, isDeleting ? 50 : 100);
+}
+
+type();
+</script>
+
+</body>
+</html>
