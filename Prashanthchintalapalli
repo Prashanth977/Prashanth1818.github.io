@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Prashanth Chintalapalli | Network Engineer</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+<style>
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  background: linear-gradient(135deg, #0f172a, #020617);
+  color: white;
+}
+
+/* Navbar */
+nav {
+  position: sticky;
+  top: 0;
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 60px;
+  background: rgba(0,0,0,0.4);
+  backdrop-filter: blur(10px);
+  z-index: 1000;
+}
+
+nav h2 {
+  color: #38bdf8;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  margin-left: 20px;
+  transition: 0.3s;
+}
+
+nav a:hover {
+  color: #38bdf8;
+}
+
+/* Hero */
+.hero {
+  text-align: center;
+  padding: 100px 20px;
+}
+
+.hero h1 {
+  font-size: 48px;
+}
+
+.hero span {
+  color: #38bdf8;
+}
+
+.hero p {
+  margin-top: 10px;
+  color: #94a3b8;
+}
+
+.btn {
+  display: inline-block;
+  margin-top: 25px;
+  padding: 12px 25px;
+  background: #38bdf8;
+  color: black;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+.btn:hover {
+  transform: scale(1.05);
+}
+
+/* Sections */
+section {
+  max-width: 1100px;
+  margin: auto;
+  padding: 60px 20px;
+}
+
+/* Glass Cards */
+.card {
+  background: rgba(255,255,255,0.05);
+  border-radius: 15px;
+  padding: 25px;
+  margin-bottom: 25px;
+  backdrop-filter: blur(12px);
+  transition: 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-8px);
+}
+
+/* Headings */
+h2 {
+  color: #38bdf8;
+  margin-bottom: 15px;
+}
+
+/* Skills */
+.skills span {
+  display: inline-block;
+  background: #1e293b;
+  padding: 8px 15px;
+  margin: 5px;
+  border-radius: 20px;
+  font-size: 14px;
+}
+
+/* Projects */
+.project {
+  border-left: 3px solid #38bdf8;
+  padding-left: 15px;
+  margin-bottom: 15px;
+}
+
+/* Contact */
+.contact a {
+  display: inline-block;
+  margin-top: 10px;
+  color: #38bdf8;
+  text-decoration: none;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 20px;
+  background: #020617;
+}
+
+/* Animation */
+.fade {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: 1s;
+}
+
+.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+</style>
+</head>
+
+<body>
+
+<nav>
+  <h2>Prashanth</h2>
+  <div>
+    <a href="#about">About</a>
+    <a href="#skills">Skills</a>
+    <a href="#projects">Projects</a>
+    <a href="#contact">Contact</a>
+  </div>
+</nav>
+
+<div class="hero">
+  <h1>Hi, I'm <span>Prashanth Chintalapalli</span></h1>
+  <p>Network Engineer | NOC Specialist</p>
+  <a href="#" class="btn">Download Resume</a>
+</div>
+
+<section id="about" class="fade">
+  <div class="card">
+    <h2>About Me</h2>
+    <p>
+      Network Engineer with 4+ years of experience in Network Operations,
+      troubleshooting, and maintaining enterprise networks.
+      Specialized in handling live production environments and ensuring uptime.
+    </p>
+  </div>
+</section>
+
+<section id="skills" class="fade">
+  <div class="card">
+    <h2>Skills</h2>
+    <div class="skills">
+      <span>BGP</span>
+      <span>OSPF</span>
+      <span>MPLS</span>
+      <span>Routing & Switching</span>
+      <span>Firewall</span>
+      <span>VPN</span>
+      <span>Juniper</span>
+      <span>Cisco</span>
+      <span>NOC Operations</span>
+    </div>
+  </div>
+</section>
+
+<section id="projects" class="fade">
+  <div class="card">
+    <h2>Projects</h2>
+
+    <div class="project">
+      <h3>BGP Routing Lab</h3>
+      <p>Configured path selection and failover scenarios.</p>
+    </div>
+
+    <div class="project">
+      <h3>OSPF Troubleshooting</h3>
+      <p>Resolved neighbor adjacency issues and LSA problems.</p>
+    </div>
+
+    <div class="project">
+      <h3>MPLS L3VPN</h3>
+      <p>Implemented basic MPLS VPN architecture.</p>
+    </div>
+
+  </div>
+</section>
+
+<section class="fade">
+  <div class="card">
+    <h2>Certifications</h2>
+    <p>JNCIA - Juniper Networks Certified Associate</p>
+  </div>
+</section>
+
+<section id="contact" class="fade">
+  <div class="card contact">
+    <h2>Contact</h2>
+    <p>Email: prashanthchintalapalli1818@gmail.com</p>
+    <a href="#"> https://www.linkedin.com/in/prashanth-chintalapalli-0b1378396 </a>
+  </div>
+</section>
+
+<footer>
+  <p>© 2026 Prashanth Chintalapalli</p>
+</footer>
+
+<script>
+const faders = document.querySelectorAll('.fade');
+
+window.addEventListener('scroll', () => {
+  faders.forEach(el => {
+    const top = el.getBoundingClientRect().top;
+    if(top < window.innerHeight - 100){
+      el.classList.add('show');
+    }
+  });
+});
+</script>
+
+</body>
+</html>
